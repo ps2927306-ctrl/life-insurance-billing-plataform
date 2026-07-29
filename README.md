@@ -1,70 +1,114 @@
-# 🚀 Life Insurance Billing Platform
+# Life Insurance Billing Platform
 
-> Plataforma web para automação do faturamento corporativo de seguros de vida, com validação inteligente, conferência automática e padronização operacional.
----
+> A browser-based workflow for corporate group-life billing, designed to replace fragile spreadsheet macros with validation-led, repeatable operations.
 
-## 📖 Sobre o projeto
+[![Portfolio project](https://img.shields.io/badge/type-portfolio%20case-2563eb?style=flat-square)](#portfolio-scope)
+[![Architecture](https://img.shields.io/badge/architecture-browser--first-0f766e?style=flat-square)](docs/architecture.md)
+[![Privacy](https://img.shields.io/badge/data-public%20demo%20only-7c3aed?style=flat-square)](#portfolio-scope)
 
-A **Life Insurance Billing Platform** é uma aplicação web desenvolvida para substituir um processo baseado em macros do Excel utilizado no faturamento mensal de seguros de vida em grupo.
+<p align="center"><img src="assets/logo/lifebill-mark.svg" width="92" alt="Life Insurance Billing Platform logo"></p>
 
-A plataforma centraliza todas as etapas do processo operacional em uma única interface, eliminando dependências de planilhas complexas e reduzindo riscos operacionais.
+## Overview
 
----
+Life Insurance Billing Platform is a portfolio case study of a standalone web application for the monthly billing cycle of group life insurance. The original workflow relied on an Excel macro and manual cross-checking. The platform brings import, data quality checks, insurer-layout generation, reconciliation, and monthly control into one browser-based experience.
 
-## 🎯 Problema
+The design principle is intentionally simple: **open in a modern browser, work locally, and export safely**. No application server or installation is required for the operational workflow.
 
-Antes da plataforma, o processo apresentava diversos desafios:
+## The challenge
 
-- Dependência de macros do Excel
-- Alto risco de erros manuais
-- Perda de zeros à esquerda em CPF
-- Conferência manual entre bases
-- Tratamento complexo de regras de negócio
-- Distribuição difícil de novas versões
+The legacy process introduced recurring operational risk:
 
----
+- Repetitive manual completion of billing fields.
+- Errors detected too late in the process.
+- Manual reconciliation across client, import, and insurer data.
+- Spreadsheet macros that were difficult to distribute and maintain.
+- Loss of leading zeros when national ID values were interpreted as numbers by Excel.
 
-## 💡 Solução
+## The solution
 
-Foi desenvolvida uma aplicação Web executada diretamente no navegador, sem necessidade de instalação.
+The platform turns the billing cycle into a guided six-step workflow:
 
-A plataforma automatiza:
+1. Import and review insured-member data.
+2. Apply safe bulk completion and inline edits.
+3. Validate critical business rules in real time.
+4. Generate an insurer-specific export only when critical errors are resolved.
+5. Reconcile up to three data sources and invoice totals.
+6. Register the cycle in a monthly checklist.
 
-- Importação de arquivos
-- Validação de dados
-- Normalização de CPF
-- Conferência entre bases
-- Geração de layouts
-- Exportação para Excel
+## Product capabilities
 
----
+| Capability | Outcome |
+| --- | --- |
+| Data normalization | Restores leading zeros in identifier values and keeps them as text in exports. |
+| Real-time validation | Highlights invalid, incomplete, and duplicate records before delivery. |
+| Configurable business rules | Supports company-level capital, premium, duplicate-enrollment, and sub-invoice rules. |
+| Bulk completion | Applies shared cycle values without repetitive row-by-row work. |
+| Insurer-layout export | Produces the expected column structure and blocks export on critical errors. |
+| Three-way reconciliation | Compares insurer, imported, and client sources; flags changes and field-level differences. |
+| Invoice check | Compares member count, insured capital, and premium totals with a tolerance rule. |
+| Local continuity | Uses browser storage for automatic state recovery during an active cycle. |
+| Monthly checklist | Records completion by company and reporting month. |
 
-## ⚙️ Tecnologias
+## Impact
 
-- HTML5
-- CSS3
-- JavaScript
-- Excel
-- BPMN
-- Notion
+The pilot reduced a typical processing cycle from approximately **30 minutes to under 5 minutes** — an estimated **85% reduction** — while moving validation earlier in the process and reducing rework caused by corrupted identifiers or incorrect billing values.
 
----
+## Architecture
 
-## 📈 Resultados
+```mermaid
+flowchart LR
+  A[Excel files] --> B[Browser application]
+  B --> C[Normalized in-memory records]
+  C --> D[Validation engine]
+  D --> E{Critical errors?}
+  E -- Yes --> F[Inline correction]
+  F --> C
+  E -- No --> G[Layout generator]
+  C --> H[Reconciliation engine]
+  H --> I[Invoice check]
+  G --> J[Excel export]
+  B <--> K[Local browser storage]
+```
 
-- Redução de aproximadamente **85%** no tempo de processamento.
-- Eliminação da dependência de macros.
-- Redução de erros operacionais.
-- Padronização do processo mensal.
+Read the [architecture overview](docs/architecture.md) for the component model and design decisions.
 
----
+## Screenshots
 
-## 📌 Status
+Screenshots can be added to `assets/screenshots/`:
 
-🟢 Projeto concluído e utilizado como piloto de modernização do processo de faturamento.
+| Area | Suggested file |
+| --- | --- |
+| Data workspace | `assets/screenshots/01-data.png` |
+| Validation dashboard | `assets/screenshots/02-validation.png` |
+| Layout preview | `assets/screenshots/03-layout.png` |
+| Reconciliation | `assets/screenshots/04-reconciliation.png` |
+| Company settings | `assets/screenshots/05-companies.png` |
+| Monthly checklist | `assets/screenshots/06-checklist.png` |
 
----
+> Before publishing screenshots, remove company branding, real client data, user names, invoice values, and any other sensitive information.
 
-## 👩‍💻 Autora
+## Documentation
 
-Pamela Soares
+- [Architecture](docs/architecture.md)
+- [Business rules](docs/business-rules.md)
+- [Process flow](docs/process-flow.md)
+- [Roadmap](docs/roadmap.md)
+
+## GitHub Pages
+
+This repository includes a static presentation site at the repository root. In GitHub, open **Settings → Pages**, select **Deploy from a branch**, then choose `main` and `/(root)`.
+
+`https://<your-github-username>.github.io/life-insurance-billing-platform/`
+
+## Portfolio scope
+
+This is a public portfolio representation of a real operational modernization initiative. It intentionally excludes the original application source, production configurations, client identities, insurer-specific commercial rules, credentials, and operational data. Names, figures, and examples must remain fictional or generalized.
+
+## Author
+
+**Pamela Soares**  
+Operational Excellence · Process Automation · AI-assisted product delivery
+
+## License
+
+This portfolio repository is available under the [MIT License](LICENSE).

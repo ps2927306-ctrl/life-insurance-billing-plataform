@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Life Insurance Billing Platform</title>
+  <desc id="desc">Abstract blue and teal mark representing reliable billing flows.</desc>
+  <defs><linearGradient id="g" x1="18" y1="16" x2="112" y2="112" gradientUnits="userSpaceOnUse"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs>
+  <rect width="128" height="128" rx="30" fill="#eff6ff"/>
+  <path d="M35 26h41l17 17v59H35z" fill="url(#g)"/>
+  <path d="M76 26v18h17" fill="#99f6e4"/>
+  <path d="M48 61h31M48 76h31M48 91h20" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+</svg>
