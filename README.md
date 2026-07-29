@@ -74,18 +74,21 @@ Read the [architecture overview](docs/architecture.md) for the component model a
 
 ## Screenshots
 
-Screenshots can be added to `assets/screenshots/`:
+The interface is intentionally kept in Portuguese, reflecting the workflow of its intended operational users. The portfolio documentation is in English for broader accessibility.
 
-| Area | Suggested file |
+| Data workspace | Validation dashboard |
 | --- | --- |
-| Data workspace | `assets/screenshots/01-data.png` |
-| Validation dashboard | `assets/screenshots/02-validation.png` |
-| Layout preview | `assets/screenshots/03-layout.png` |
-| Reconciliation | `assets/screenshots/04-reconciliation.png` |
-| Company settings | `assets/screenshots/05-companies.png` |
-| Monthly checklist | `assets/screenshots/06-checklist.png` |
+| ![Data workspace](assets/screenshots/01-data.png) | ![Validation dashboard](assets/screenshots/02-validation.png) |
 
-> Before publishing screenshots, remove company branding, real client data, user names, invoice values, and any other sensitive information.
+| Insurer layout preview | Three-way reconciliation |
+| --- | --- |
+| ![Layout preview](assets/screenshots/03-layout.png) | ![Reconciliation](assets/screenshots/04-reconciliation.png) |
+
+| Company settings | Monthly checklist |
+| --- | --- |
+| ![Company settings](assets/screenshots/05-companies.png) | ![Monthly checklist](assets/screenshots/06-checklist.png) |
+
+> Screenshots use fictional organizations and sanitized data. Do not add production files, personal data, commercial values, or company branding to this public repository.
 
 ## Documentation
 
