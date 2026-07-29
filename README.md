@@ -1,7 +1,6 @@
 # 🚀 Life Insurance Billing Platform
 
-> Modernização do faturamento corporativo de Seguro de Vida através de uma plataforma web.
-
+> Plataforma web para automação do faturamento corporativo de seguros de vida, com validação inteligente, conferência automática e padronização operacional.
 ---
 
 ## 📖 Sobre o projeto
