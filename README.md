@@ -90,6 +90,10 @@ The interface is intentionally kept in Portuguese, reflecting the workflow of it
 | --- | --- |
 | ![Company settings](assets/screenshots/05-companies.png) | ![Monthly checklist](assets/screenshots/06-checklist.png) |
 
+### Historical monthly audit
+
+![Historical comparison between billing competencies](assets/screenshots/07-historical-audit.png)
+
 > Screenshots use fictional organizations and sanitized data. Do not add production files, personal data, commercial values, or company branding to this public repository.
 
 ## Documentation
