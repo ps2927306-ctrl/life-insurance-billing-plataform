@@ -27,7 +27,8 @@ flowchart TB
 | Interface | Six workflow tabs for data, validation, layout, reconciliation, company configuration, and checklist. |
 | Domain logic | Functions for identifier normalization, validation, calculation, layout creation, and comparison. |
 | Working state | In-memory records for the selected company and billing cycle. |
-| Persistence | Browser `localStorage` for recovery of an active local session. |
+| Persistence | Browser local storage for recovery of an active local session. |
+| Historical archive | A frozen cycle snapshot used as the comparison baseline for the next available billing competency. |
 | Spreadsheet I/O | Client-side reading and writing of workbook data through SheetJS/XLSX. |
 
 ## Key design decisions
@@ -47,6 +48,10 @@ Default company settings are retained in application code and merged with editab
 ### Quality gate at export
 
 Users can inspect and fix records freely, but the final insurer-layout export remains unavailable while a critical validation issue exists. This places the quality control at the handoff point without blocking work-in-progress.
+
+### Historical comparison
+
+When a cycle is archived, the platform can use it as the baseline for a subsequent competency. The comparison identifies registration changes (name, date of birth, and enrollment number) as well as salary, insured-capital, and premium changes. Financial comparisons require values on both sides so missing historical values do not create false-positive alerts.
 
 ## Constraints and future evolution
 

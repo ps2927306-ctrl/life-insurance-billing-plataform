@@ -9,6 +9,7 @@
 - Configurable company rules and calculation models.
 - Layout generation, including sub-invoice handling.
 - Three-way reconciliation and invoice verification.
+- Historical comparison against the latest archived competency, with registration and financial change categories.
 - Local state recovery and monthly checklist.
 
 ## Next product iterations

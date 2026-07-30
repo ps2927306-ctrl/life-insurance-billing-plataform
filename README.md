@@ -33,7 +33,8 @@ The platform turns the billing cycle into a guided six-step workflow:
 3. Validate critical business rules in real time.
 4. Generate an insurer-specific export only when critical errors are resolved.
 5. Reconcile up to three data sources and invoice totals.
-6. Register the cycle in a monthly checklist.
+6. Compare the current cycle with the latest archived cycle.
+7. Register the cycle in a monthly checklist.
 
 ## Product capabilities
 
@@ -46,6 +47,7 @@ The platform turns the billing cycle into a guided six-step workflow:
 | Insurer-layout export | Produces the expected column structure and blocks export on critical errors. |
 | Three-way reconciliation | Compares insurer, imported, and client sources; flags changes and field-level differences. |
 | Invoice check | Compares member count, insured capital, and premium totals with a tolerance rule. |
+| Historical comparison | Audits the current cycle against the latest archived cycle and highlights registration, salary, insured-capital, and premium changes. |
 | Local continuity | Uses browser storage for automatic state recovery during an active cycle. |
 | Monthly checklist | Records completion by company and reporting month. |
 

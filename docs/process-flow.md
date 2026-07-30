@@ -15,8 +15,9 @@ flowchart TD
   H --> I[Export layout workbook]
   I --> J[Load reconciliation sources]
   J --> K[Compare records and invoice totals]
-  K --> L[Review divergences and exceptions]
-  L --> M[Mark monthly checklist complete]
+  K --> L[Compare current cycle with latest archived cycle]
+  L --> M[Review divergences, changes, and exceptions]
+  M --> N[Mark monthly checklist complete and archive cycle]
 ```
 
 ## Workflow modules
@@ -27,6 +28,7 @@ flowchart TD
 | Validation | Identify issues before delivery. | Record- and field-level issue list. |
 | Layout | Create the required workbook. | Validated spreadsheet export. |
 | Reconciliation | Verify source consistency and invoice totals. | Summary and discrepancy reports. |
+| Historical comparison | Audit changes against the latest archived billing competency. | Registration, salary, capital, and premium change alerts. |
 | Companies | Maintain reusable operational parameters. | Calculation and exception settings. |
 | Checklist | Track closure by billing month. | Completion log for the cycle. |
 

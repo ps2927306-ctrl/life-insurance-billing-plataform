@@ -10,6 +10,7 @@ All notable changes to this public portfolio representation are documented here.
 - Architecture, business-rule, process-flow, and roadmap documentation.
 - GitHub Pages presentation site.
 - Neutral visual identity and screenshot placeholders.
+- Historical-comparison capability: registration, salary, insured-capital, and premium change detection between billing competencies.
 
 ### Excluded intentionally
 

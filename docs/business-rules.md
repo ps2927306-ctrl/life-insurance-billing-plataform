@@ -50,6 +50,19 @@ The output categorizes matched records, new records, exits or exclusions, missin
 
 The reconciliation step compares total covered lives, insured capital, and premium against invoice values entered by the analyst. A small monetary tolerance can be configured to avoid false positives caused by rounding.
 
+## Historical cycle comparison
+
+The comparison baseline is the latest archived competency earlier than the competency currently being processed; it is not necessarily the immediately preceding calendar month. This preserves a meaningful comparison even when a month is skipped or a cycle is reprocessed out of sequence.
+
+Records are matched primarily by normalized identifier, with a controlled name-based fallback for review. The output classifies differences into:
+
+- **Registration:** name, date of birth, or enrollment number changed;
+- **Salary:** salary changed between archived and current data;
+- **Insured capital:** insured-capital amount changed;
+- **Premium:** premium amount changed.
+
+Salary, capital, and premium are compared only when both records contain a value. Registration fields remain relevant even when one source is empty, because those gaps represent a data-quality issue rather than a financial comparison.
+
 ## Monthly checklist
 
 Checklist completion is recorded by company and billing month. The status captures the completion date and can be exported for operational follow-up.
