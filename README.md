@@ -105,9 +105,7 @@ The interface is intentionally kept in Portuguese, reflecting the workflow of it
 
 ## GitHub Pages
 
-This repository includes a static presentation site at the repository root. In GitHub, open **Settings → Pages**, select **Deploy from a branch**, then choose `main` and `/(root)`.
-
-`https://<your-github-username>.github.io/life-insurance-billing-platform/`
+(https://pamelasoares97.github.io/life-insurance-billing-platform/)
 
 ## Portfolio scope
 
